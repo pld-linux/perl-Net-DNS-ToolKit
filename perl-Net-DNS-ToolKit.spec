@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_without  tests           # do not perform "make test"
+%bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Net
@@ -28,7 +28,7 @@ as DNS servers and clients or to allow user applications to interact
 directly with remote DNS servers.
 
 %description -l pl
-Procedury do wybierania, badania oraz sk³adania pakietów DNS.  Mog±
+Procedury do wybierania, badania oraz sk³adania pakietów DNS. Mog±
 byæ u¿yte do celów diagnostycznych lub do tworzenia bloków dla
 aplikacji NDS takich jak serwery oraz klienci DNS lub do umo¿liwienia
 u¿ytkownikowi do bezpo¶redniej interakcji ze zdalnymi serwerami DNS.
