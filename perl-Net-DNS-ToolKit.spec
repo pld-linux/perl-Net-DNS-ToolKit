@@ -14,6 +14,9 @@ License:	GPL v2+
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	ed41a6787f5e89666ab7ed6048e4b56e
+%if %{with tests}
+BuildRequires:	perl-Net-DNS-Codes >= 0.06
+%endif
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -24,8 +27,11 @@ used for diagnostic purposes or as building blocks for DNS applications such
 as DNS servers and clients or to allow user applications to interact
 directly with remote DNS servers.
 
-# %description -l pl
-# TODO
+%description -l pl
+Procedury do wybierania, badania oraz sk³adania pakietów DNS.  Mog±
+byæ u¿yte do celów diagnostycznych lub do tworzenia bloków dla
+aplikacji NDS takich jak serwery oraz klienci DNS lub do umo¿liwienia
+u¿ytkownikowi do bezpo¶redniej interakcji ze zdalnymi serwerami DNS.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
