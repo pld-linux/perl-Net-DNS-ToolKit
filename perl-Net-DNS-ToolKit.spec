@@ -23,15 +23,15 @@ BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Routines to pick apart, examine and put together DNS packets. They can be
-used for diagnostic purposes or as building blocks for DNS applications such
-as DNS servers and clients or to allow user applications to interact
-directly with remote DNS servers.
+Routines to pick apart, examine and put together DNS packets. They can
+be used for diagnostic purposes or as building blocks for DNS
+applications such as DNS servers and clients or to allow user
+applications to interact directly with remote DNS servers.
 
 %description -l pl
-Procedury do wybierania, badania oraz sk³adania pakietów DNS. Mog±
-byæ u¿yte do celów diagnostycznych lub do tworzenia bloków dla
-aplikacji NDS takich jak serwery oraz klienci DNS lub do umo¿liwienia
+Procedury do wybierania, badania oraz sk³adania pakietów DNS. Mog± byæ
+u¿yte do celów diagnostycznych lub do tworzenia bloków dla aplikacji
+NDS takich jak serwery oraz klienci DNS lub do umo¿liwienia
 u¿ytkownikowi do bezpo¶redniej interakcji ze zdalnymi serwerami DNS.
 
 %prep
@@ -41,7 +41,7 @@ u¿ytkownikowi do bezpo¶redniej interakcji ze zdalnymi serwerami DNS.
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
 
-%{__make} \
+%{__make} -j1 \
 	OPTIMIZE="%{rpmcflags}"
 
 %{?with_tests:%{__make} test}
@@ -49,8 +49,10 @@ u¿ytkownikowi do bezpo¶redniej interakcji ze zdalnymi serwerami DNS.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install \
+%{__make} pure_install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/auto/Net/DNS/ToolKit/.packlist
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -60,10 +62,12 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes INSTALL README
 %{perl_vendorarch}/Net/DNS/*.pm
 %{perl_vendorarch}/Net/DNS/ToolKit
+%dir %{perl_vendorarch}/auto/Net/DNS
 %dir %{perl_vendorarch}/auto/Net/DNS/ToolKit
 %attr(755,root,root) %{perl_vendorarch}/auto/Net/DNS/ToolKit/*.so
 %{perl_vendorarch}/auto/Net/DNS/ToolKit/*.ix
 %{perl_vendorarch}/auto/Net/DNS/ToolKit/*.al
+%{perl_vendorarch}/auto/Net/DNS/ToolKit/*.bs
 %{perl_vendorarch}/auto/Net/DNS/ToolKit/Debug
 %{perl_vendorarch}/auto/Net/DNS/ToolKit/Utilities
 %{_mandir}/man3/*
