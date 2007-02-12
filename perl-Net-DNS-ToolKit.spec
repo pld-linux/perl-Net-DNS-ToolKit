@@ -6,7 +6,7 @@
 %define		pdir	Net
 %define		pnam	DNS-ToolKit
 Summary:	Net::DNS::ToolKit - tools for working with DNS packets
-Summary(pl):	Net::DNS::ToolKit - narzêdzia do pracy z pakietami DNS
+Summary(pl.UTF-8):   Net::DNS::ToolKit - narzÄ™dzia do pracy z pakietami DNS
 Name:		perl-Net-DNS-ToolKit
 Version:	0.25
 Release:	1
@@ -28,11 +28,11 @@ be used for diagnostic purposes or as building blocks for DNS
 applications such as DNS servers and clients or to allow user
 applications to interact directly with remote DNS servers.
 
-%description -l pl
-Procedury do wybierania, badania oraz sk³adania pakietów DNS. Mog± byæ
-u¿yte do celów diagnostycznych lub do tworzenia bloków dla aplikacji
-NDS takich jak serwery oraz klienci DNS lub do umo¿liwienia
-u¿ytkownikowi do bezpo¶redniej interakcji ze zdalnymi serwerami DNS.
+%description -l pl.UTF-8
+Procedury do wybierania, badania oraz skÅ‚adania pakietÃ³w DNS. MogÄ… byÄ‡
+uÅ¼yte do celÃ³w diagnostycznych lub do tworzenia blokÃ³w dla aplikacji
+NDS takich jak serwery oraz klienci DNS lub do umoÅ¼liwienia
+uÅ¼ytkownikowi do bezpoÅ›redniej interakcji ze zdalnymi serwerami DNS.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
