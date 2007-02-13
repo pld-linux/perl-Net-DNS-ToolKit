@@ -6,7 +6,7 @@
 %define		pdir	Net
 %define		pnam	DNS-ToolKit
 Summary:	Net::DNS::ToolKit - tools for working with DNS packets
-Summary(pl.UTF-8):   Net::DNS::ToolKit - narzędzia do pracy z pakietami DNS
+Summary(pl.UTF-8):	Net::DNS::ToolKit - narzędzia do pracy z pakietami DNS
 Name:		perl-Net-DNS-ToolKit
 Version:	0.25
 Release:	1
