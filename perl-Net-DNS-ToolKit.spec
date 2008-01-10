@@ -43,6 +43,7 @@ użytkownikowi do bezpośredniej interakcji ze zdalnymi serwerami DNS.
 	INSTALLDIRS=vendor
 
 %{__make} -j1 \
+	CC="%{__cc}" \
 	OPTIMIZE="%{rpmcflags}"
 
 %{?with_tests:%{__make} test}
