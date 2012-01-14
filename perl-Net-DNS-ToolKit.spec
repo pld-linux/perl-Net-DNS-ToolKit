@@ -8,12 +8,12 @@
 Summary:	Net::DNS::ToolKit - tools for working with DNS packets
 Summary(pl.UTF-8):	Net::DNS::ToolKit - narzędzia do pracy z pakietami DNS
 Name:		perl-Net-DNS-ToolKit
-Version:	0.42
-Release:	2
+Version:	0.45
+Release:	1
 License:	GPL v2+
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Net/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	10d62b4d6fdc268828589703e21e06f7
+# Source0-md5:	843d8a14a42d75f56c6cd69b6032cf5d
 URL:		http://search.cpan.org/dist/Net-DNS-ToolKit/
 %if %{with tests}
 BuildRequires:	perl-Net-DNS-Codes >= 0.06
