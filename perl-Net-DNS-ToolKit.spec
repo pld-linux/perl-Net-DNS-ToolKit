@@ -69,7 +69,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{perl_vendorarch}/auto/Net/DNS/ToolKit/*.so
 %{perl_vendorarch}/auto/Net/DNS/ToolKit/*.ix
 %{perl_vendorarch}/auto/Net/DNS/ToolKit/*.al
-%{perl_vendorarch}/auto/Net/DNS/ToolKit/*.bs
 %{perl_vendorarch}/auto/Net/DNS/ToolKit/Debug
 %{perl_vendorarch}/auto/Net/DNS/ToolKit/Utilities
 %{_mandir}/man3/*
