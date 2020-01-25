@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	Net
 %define		pnam	DNS-ToolKit
 Summary:	Net::DNS::ToolKit - tools for working with DNS packets
